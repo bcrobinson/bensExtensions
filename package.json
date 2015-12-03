@@ -1,0 +1,58 @@
+{
+    "name": "more-scrolling",
+    "displayName": "more-scrolling",
+    "description": "More scrolling",
+    "version": "0.0.1",
+    "publisher": "BenCRobinson",
+    "engines": {
+        "vscode": "^0.10.1"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:more-scroll.listCommands",
+        "onCommand:more-scroll.closeOtherWorkingFiles",
+        "onCommand:more-scroll.downLine",
+        "onCommand:more-scroll.upLine"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "more-scroll.listCommands",
+                "title": "List all commands"
+            },
+            {
+                "command": "more-scroll.closeOtherWorkingFiles",
+                "title": "Close other working files"
+            },
+            {
+                "command": "more-scroll.downLine",
+                "title": "Scroll down one line"
+            },
+            {
+                "command": "more-scroll.upLine",
+                "title": "Scroll up one line"
+            }
+        ],
+        "keybindings": [
+            {
+                "key": "ctrl+down",
+                "command": "more-scroll.downLine"
+            },
+            {
+                "key": "ctrl+up",
+                "command": "more-scroll.upLine"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    },
+    "devDependencies": {
+        "typescript": "^1.6.2",
+        "vscode": "0.10.x"
+    }
+}
