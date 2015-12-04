@@ -1,8 +1,14 @@
+# dirs
 .vscode/**
-typings/**
 out/test/**
-test/**
 src/**
+typings/**
+test/**
+
+# global globs
 **/*.map
+
+# specific files
 .gitignore
 tsconfig.json
+jsconfig.json
