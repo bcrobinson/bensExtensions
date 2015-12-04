@@ -1,12 +1,20 @@
 {
-	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es6",
-		"outDir": "out",
-		"noLib": true,
-		"sourceMap": true
-	},
-	"exclude": [
-		"node_modules"
-	]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "outDir": "out/src",
+        "noLib": true,
+        "sourceMap": true
+    },
+    "files": [
+        "typings/node.d.ts",
+        "typings/vscode-typings.d.ts",
+        "src/commands.ts",
+        "src/extension.ts",
+        "src/helperCommands.ts",
+        "src/scrollCommands.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }

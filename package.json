@@ -1,49 +1,49 @@
 {
-    "name": "more-scrolling",
-    "displayName": "more-scrolling",
-    "description": "More scrolling",
+    "name": "bens-extensions",
+    "displayName": "bens-extensions",
+    "description": "Ben's Extensions",
     "version": "0.0.1",
-    "publisher": "BenCRobinson",
+    "publisher": "Ben C Robinson",
     "engines": {
-        "vscode": "^0.10.1"
+        "vscode": "^0.10.3"
     },
     "categories": [
         "Other"
     ],
     "activationEvents": [
-        "onCommand:more-scroll.listCommands",
-        "onCommand:more-scroll.closeOtherWorkingFiles",
-        "onCommand:more-scroll.downLine",
-        "onCommand:more-scroll.upLine"
+        "onCommand:bens-extensions.listCommands",
+        "onCommand:bens-extensions.closeOtherWorkingFiles",
+        "onCommand:bens-extensions.moveCursorAndScrollUp",
+        "onCommand:bens-extensions.moveCursorAndScrollDown"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "more-scroll.listCommands",
+                "command": "bens-extensions.listCommands",
                 "title": "List all commands"
             },
             {
-                "command": "more-scroll.closeOtherWorkingFiles",
+                "command": "bens-extensions.closeOtherWorkingFiles",
                 "title": "Close other working files"
             },
             {
-                "command": "more-scroll.downLine",
-                "title": "Scroll down one line"
+                "command": "bens-extensions.moveCursorAndScrollUp",
+                "title": "Moves cursor up one line and centers window on cursor"
             },
             {
-                "command": "more-scroll.upLine",
-                "title": "Scroll up one line"
+                "command": "bens-extensions.moveCursorAndScrollDown",
+                "title": "Moves cursor down one line and centers window on cursor"
             }
         ],
         "keybindings": [
             {
-                "key": "ctrl+down",
-                "command": "more-scroll.downLine"
+                "key": "ctrl+up",
+                "command": "bens-extensions.moveCursorAndScrollUp"
             },
             {
-                "key": "ctrl+up",
-                "command": "more-scroll.upLine"
+                "key": "ctrl+down",
+                "command": "bens-extensions.moveCursorAndScrollDown"
             }
         ]
     },
@@ -52,7 +52,7 @@
         "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
     },
     "devDependencies": {
-        "typescript": "^1.6.2",
-        "vscode": "0.10.x"
+        "typescript": "^1.7.3",
+        "vscode": "^0.10.3"
     }
 }
